@@ -43,36 +43,61 @@
   }
 
   /* ---------- HERO ---------- */
-  .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden}
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
   .hero .bgvideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-                 opacity:.38;z-index:0}
-  .hero .bgimg{position:absolute;inset:0;background:#0f0f14 center/cover no-repeat;opacity:.34;z-index:0}
+                 opacity:.34;z-index:0}
+  /* unscharfe, abgedunkelte Kopie des Posters als Hintergrund */
+  .hero .bgimg{position:absolute;inset:-4%;background:#0d0d11 center/cover no-repeat;opacity:.30;
+               filter:blur(30px) saturate(1.15);z-index:0}
   .hero::after{content:"";position:absolute;inset:0;z-index:1;
-    background:linear-gradient(180deg,rgba(10,10,12,.55) 0%,rgba(10,10,12,.78) 55%,var(--bg) 100%)}
-  .hero .wrap{position:relative;z-index:2;padding-top:70px;padding-bottom:70px;width:100%}
+    background:radial-gradient(780px 430px at 24% 40%, rgba(226,180,85,.16), transparent 62%),
+               linear-gradient(180deg,rgba(8,8,10,.60) 0%,rgba(8,8,10,.86) 58%,var(--bg) 100%)}
+  .hero .wrap{position:relative;z-index:2;padding-top:64px;padding-bottom:64px;width:100%}
+  .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}
   .eyebrow{color:var(--gold);font-weight:700;letter-spacing:.2em;font-size:12px;text-transform:uppercase}
-  h1{font-size:clamp(42px,8vw,86px);line-height:.98;margin:16px 0 14px;letter-spacing:-.025em;font-weight:800}
-  .claim{font-size:clamp(18px,2.5vw,24px);color:#cfcfd8;margin:0 0 28px;max-width:46ch}
+  /* Überschrift in Gold-Verlauf (schwarz/gold) */
+  h1{font-size:clamp(38px,6.2vw,70px);line-height:1;margin:16px 0 16px;letter-spacing:-.028em;font-weight:800;
+     background:linear-gradient(178deg,#ffffff 0%,#f9e2ac 42%,var(--gold) 72%,#a9761f 100%);
+     -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--gold)}
+  .claim{font-size:clamp(17px,2.2vw,22px);color:#cdcdd6;margin:0 0 26px;max-width:44ch}
   .claim b{color:#fff}
-  .badges{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 32px}
-  .badge{border:1px solid var(--line);background:rgba(23,23,29,.85);border-radius:999px;
+  .badges{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 30px}
+  .badge{border:1px solid rgba(226,180,85,.28);background:rgba(20,20,25,.78);border-radius:999px;
          padding:9px 17px;font-size:14px}
   .badge b{color:var(--gold2)}
   .cta{display:flex;gap:14px;flex-wrap:wrap}
   .btn{display:inline-block;padding:14px 26px;border-radius:11px;font-weight:700;font-size:15px;
        border:1px solid transparent;cursor:pointer}
-  .btn.primary{background:var(--gold);color:#141414}
-  .btn.primary:hover{background:var(--gold2);text-decoration:none}
-  .btn.ghost{border-color:var(--line);color:var(--txt)}
+  .btn.primary{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#17130a;
+               box-shadow:0 12px 30px rgba(226,180,85,.22)}
+  .btn.primary:hover{filter:brightness(1.07);text-decoration:none}
+  .btn.ghost{border-color:rgba(226,180,85,.4);color:var(--txt)}
   .btn.ghost:hover{border-color:var(--gold);color:var(--gold);text-decoration:none}
-  .scrollcue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;
+  /* Poster-Rahmen (Hero-Bild) */
+  .poster{position:relative;aspect-ratio:4/5;max-width:520px;margin-left:auto;border-radius:18px;
+          overflow:hidden;background:#0d0d11;border:1px solid rgba(226,180,85,.42);
+          box-shadow:0 34px 80px rgba(0,0,0,.62),0 0 70px rgba(226,180,85,.13)}
+  .poster img{width:100%;height:100%;object-fit:cover}
+  .poster::after{content:"";position:absolute;inset:0;border-radius:18px;pointer-events:none;
+                 box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+  .poster .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+              text-align:center;color:#6a6a78;font-size:14px;padding:24px;border-radius:18px;
+              background:repeating-linear-gradient(45deg,#131319,#131319 12px,#181820 12px,#181820 24px)}
+  .scrollcue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:3;
              color:var(--muted);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase}
-  @media(max-width:700px){.hero{min-height:82vh}}
+  @media(max-width:900px){
+    .hero{min-height:auto;padding-top:26px}
+    .hero-grid{grid-template-columns:1fr;gap:28px}
+    .poster{order:-1;max-width:420px;margin:0 auto}   /* Foto steht am Handy ganz oben */
+    .scrollcue{display:none}
+  }
 
   /* ---------- SECTIONS ---------- */
   section{padding:84px 0;border-top:1px solid var(--line)}
   section.tight{padding-top:60px}
   h2{font-size:clamp(27px,4vw,40px);margin:0 0 10px;letter-spacing:-.015em;font-weight:800}
+  h2::after{content:"";display:block;width:62px;height:3px;margin-top:16px;border-radius:2px;
+            background:linear-gradient(90deg,var(--gold),rgba(226,180,85,0))}
   h3{font-size:19px;margin:0 0 8px}
   .sub{color:var(--muted);margin:0 0 38px;max-width:72ch}
   .lead{font-size:clamp(17px,2.1vw,20px);color:#d6d6de;max-width:74ch}
@@ -193,28 +218,36 @@
 
 <!-- ================= HERO ================= -->
 <div class="hero">
-  <!-- Video-Hintergrund: assets/videos/hero.mp4 ablegen → Zeile einkommentieren -->
+  <!-- Video-Hintergrund (optional): assets/videos/hero.mp4 ablegen → Zeile einkommentieren -->
   <!--
-  <video class="bgvideo" autoplay muted loop playsinline poster="assets/bilder/hero-poster.jpg">
+  <video class="bgvideo" autoplay muted loop playsinline poster="assets/bilder/hero.jpg">
     <source src="assets/videos/hero.mp4" type="video/mp4">
   </video>
   -->
-  <!-- Foto-Hintergrund: assets/bilder/hero.jpg ablegen → Zeile einkommentieren -->
-  <!-- <div class="bgimg" style="background-image:url('assets/bilder/hero.jpg')"></div> -->
+  <!-- Unscharfer Hintergrund aus demselben Poster -->
+  <div class="bgimg" style="background-image:url('assets/bilder/hero.jpg')"></div>
 
   <div class="wrap">
-    <div class="eyebrow">Profiboxerin · Superfedergewicht · Wien</div>
-    <h1>Denise<br>Stanojev</h1>
-    <p class="claim">Österreichs jüngste Profiboxerin. <b>12 Kämpfe, 12 Siege</b> — die Geschichte einer jungen Frau, die den Ring zu ihrem Zuhause gemacht hat.</p>
-    <div class="badges">
-      <span class="badge">Bilanz <b>12-0-0</b></span>
-      <span class="badge"><b>7</b> Siege durch KO</span>
-      <span class="badge">Profi seit <b>2021</b></span>
-      <span class="badge">#teamstanojev</span>
-    </div>
-    <div class="cta">
-      <a class="btn primary" href="#geschichte">Ihre Geschichte lesen</a>
-      <a class="btn ghost" href="#videos">Videos ansehen</a>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Profiboxerin · Superfedergewicht · Wien</div>
+        <h1>Denise<br>Stanojev</h1>
+        <p class="claim">Österreichs jüngste Profiboxerin. <b>12 Kämpfe, 12 Siege</b> — die Geschichte einer jungen Frau, die den Ring zu ihrem Zuhause gemacht hat.</p>
+        <div class="badges">
+          <span class="badge">Bilanz <b>12-0-0</b></span>
+          <span class="badge"><b>7</b> Siege durch KO</span>
+          <span class="badge">Profi seit <b>2021</b></span>
+          <span class="badge">#teamstanojev</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#geschichte">Ihre Geschichte lesen</a>
+          <a class="btn ghost" href="#videos">Videos ansehen</a>
+        </div>
+      </div>
+      <!-- Das Poster: liegt als assets/bilder/hero.jpg im Projekt -->
+      <div class="poster">
+        <img src="assets/bilder/hero.jpg" alt="Denise Stanojev – Profiboxerin" onerror="phHero(this)">
+      </div>
     </div>
   </div>
   <div class="scrollcue">↓ scrollen</div>
@@ -466,6 +499,12 @@
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
+
+  /* --- Hero-Poster: Platzhalter, falls assets/bilder/hero.jpg fehlt --- */
+  function phHero(img){
+    img.parentNode.innerHTML =
+      '<div class="ph">Hier liegt das Startfoto:<br><b>assets/bilder/hero.jpg</b></div>';
+  }
 
   /* --- Platzhalter, wenn Bild fehlt --- */
   function ph(img, label){
