@@ -500,10 +500,12 @@
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 
-  /* --- Hero-Poster: Platzhalter, falls assets/bilder/hero.jpg fehlt --- */
+  /* --- Hero-Poster: vornehmer Platzhalter, falls assets/bilder/hero.jpg noch fehlt --- */
   function phHero(img){
     img.parentNode.innerHTML =
-      '<div class="ph">Hier liegt das Startfoto:<br><b>assets/bilder/hero.jpg</b></div>';
+      '<div class="ph"><span style="font-size:46px;font-weight:800;letter-spacing:.06em;'+
+      'background:linear-gradient(178deg,#f9e2ac,#e2b455 60%,#a9761f);-webkit-background-clip:text;'+
+      'background-clip:text;-webkit-text-fill-color:transparent;color:#e2b455">DS</span></div>';
   }
 
   /* --- Platzhalter, wenn Bild fehlt --- */
