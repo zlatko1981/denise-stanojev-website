@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Denise Stanojev – Die Geschichte einer Profiboxerin</title>
+<meta name="description" content="Die Geschichte von Denise Stanojev: Österreichs jüngste Profiboxerin im Superfedergewicht. Bilder, Videos, Kampfrekord und Kontakt.">
+<meta property="og:title" content="Denise Stanojev – Profiboxerin">
+<meta property="og:description" content="Österreichs jüngste Profiboxerin. Bilder, Videos, Kampfrekord.">
+<meta property="og:type" content="website">
+<!-- TODO: og:image ergänzen, sobald Startfoto final ist -->
+<style>
+  :root{
+    --bg:#0a0a0c; --bg2:#111116; --card:#17171d; --line:#282830;
+    --txt:#f6f6f8; --muted:#a6a6b2; --gold:#e2b455; --gold2:#f7d98f;
+    --shadow:0 18px 50px rgba(0,0,0,.45);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);overflow-x:hidden;
+       font:16.5px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--gold);text-decoration:none}
+  a:hover{text-decoration:underline}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+  /* ---------- NAV ---------- */
+  header.nav{position:sticky;top:0;z-index:60;background:rgba(10,10,12,.9);
+              backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-weight:800;letter-spacing:.16em;font-size:13.5px;text-transform:uppercase}
+  .brand span{color:var(--gold)}
+  nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:14.5px}
+  nav a{color:var(--txt);opacity:.9}
+  nav a:hover{color:var(--gold);opacity:1;text-decoration:none}
+  .burger{display:none;background:none;border:1px solid var(--line);color:var(--txt);
+           border-radius:9px;padding:7px 12px;font-size:18px;line-height:1}
+  @media(max-width:860px){
+    nav ul{display:none}
+    nav ul.open{display:flex;flex-direction:column;position:absolute;top:66px;left:0;right:0;
+                background:#101014;border-bottom:1px solid var(--line);padding:18px 22px;gap:16px}
+    .burger{display:block}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden}
+  .hero .bgvideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+                 opacity:.38;z-index:0}
+  .hero .bgimg{position:absolute;inset:0;background:#0f0f14 center/cover no-repeat;opacity:.34;z-index:0}
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(10,10,12,.55) 0%,rgba(10,10,12,.78) 55%,var(--bg) 100%)}
+  .hero .wrap{position:relative;z-index:2;padding-top:70px;padding-bottom:70px;width:100%}
+  .eyebrow{color:var(--gold);font-weight:700;letter-spacing:.2em;font-size:12px;text-transform:uppercase}
+  h1{font-size:clamp(42px,8vw,86px);line-height:.98;margin:16px 0 14px;letter-spacing:-.025em;font-weight:800}
+  .claim{font-size:clamp(18px,2.5vw,24px);color:#cfcfd8;margin:0 0 28px;max-width:46ch}
+  .claim b{color:#fff}
+  .badges{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 32px}
+  .badge{border:1px solid var(--line);background:rgba(23,23,29,.85);border-radius:999px;
+         padding:9px 17px;font-size:14px}
+  .badge b{color:var(--gold2)}
+  .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 26px;border-radius:11px;font-weight:700;font-size:15px;
+       border:1px solid transparent;cursor:pointer}
+  .btn.primary{background:var(--gold);color:#141414}
+  .btn.primary:hover{background:var(--gold2);text-decoration:none}
+  .btn.ghost{border-color:var(--line);color:var(--txt)}
+  .btn.ghost:hover{border-color:var(--gold);color:var(--gold);text-decoration:none}
+  .scrollcue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;
+             color:var(--muted);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase}
+  @media(max-width:700px){.hero{min-height:82vh}}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:84px 0;border-top:1px solid var(--line)}
+  section.tight{padding-top:60px}
+  h2{font-size:clamp(27px,4vw,40px);margin:0 0 10px;letter-spacing:-.015em;font-weight:800}
+  h3{font-size:19px;margin:0 0 8px}
+  .sub{color:var(--muted);margin:0 0 38px;max-width:72ch}
+  .lead{font-size:clamp(17px,2.1vw,20px);color:#d6d6de;max-width:74ch}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:24px}
+  .card p{margin:0;color:var(--muted);font-size:15.3px}
+
+  /* ---------- GESCHICHTE / KAPITEL ---------- */
+  .chapters{margin-top:8px}
+  .chapter{display:grid;grid-template-columns:120px 1fr;gap:28px;padding:30px 0;
+           border-bottom:1px dashed var(--line)}
+  .chapter:last-child{border-bottom:none}
+  .chapter .year{color:var(--gold);font-weight:800;font-size:22px;letter-spacing:.02em}
+  .chapter .txt p{margin:0 0 10px;color:#d3d3dc}
+  @media(max-width:700px){.chapter{grid-template-columns:1fr;gap:8px;padding:22px 0}}
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{position:relative;margin-top:20px;padding-left:34px}
+  .timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;
+                    background:linear-gradient(180deg,var(--gold),rgba(226,180,85,.06))}
+  .tl{position:relative;margin-bottom:30px}
+  .tl::before{content:"";position:absolute;left:-31px;top:8px;width:12px;height:12px;border-radius:50%;
+              background:var(--gold);box-shadow:0 0 0 4px rgba(226,180,85,.16)}
+  .tl .d{font-size:13px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+  .tl .t{font-weight:700;margin:3px 0 4px}
+  .tl .x{color:var(--muted);font-size:15.3px;margin:0}
+
+  /* ---------- REKORD ---------- */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:34px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:22px;text-align:center}
+  .stat .n{font-size:38px;font-weight:800;color:var(--gold2);line-height:1}
+  .stat .l{font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:9px}
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:15px;background:var(--card)}
+  table{width:100%;border-collapse:collapse;font-size:15.3px;min-width:660px}
+  th,td{padding:14px 17px;text-align:left;border-bottom:1px solid var(--line)}
+  th{background:#15151b;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+  tr:last-child td{border-bottom:none}
+  .win{color:var(--gold2);font-weight:700}
+  .note{color:var(--muted);font-size:13.5px;margin-top:14px}
+
+  /* ---------- GALERIE ---------- */
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+  .shot{position:relative;aspect-ratio:1/1;border-radius:13px;overflow:hidden;cursor:zoom-in;
+        border:1px solid var(--line);background:#121218}
+  .shot img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .shot:hover img{transform:scale(1.05)}
+  .shot.fallback{display:flex;align-items:center;justify-content:center;border-style:dashed;
+                 color:#5d5d6a;font-size:13px;text-align:center;padding:12px;cursor:default}
+  .shot.wide{grid-column:span 2;aspect-ratio:2/1}
+  @media(max-width:640px){.shot.wide{grid-column:span 1;aspect-ratio:1/1}}
+
+  /* Lightbox */
+  .lb{position:fixed;inset:0;z-index:200;background:rgba(6,6,8,.94);display:none;
+      align-items:center;justify-content:center;padding:24px}
+  .lb.on{display:flex}
+  .lb img{max-width:94vw;max-height:86vh;border-radius:10px;box-shadow:var(--shadow)}
+  .lb .close{position:absolute;top:18px;right:22px;font-size:32px;color:#fff;background:none;
+             border:none;cursor:pointer;line-height:1}
+  .lb .prev,.lb .next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);
+        border:1px solid var(--line);color:#fff;font-size:26px;width:48px;height:48px;border-radius:50%;
+        cursor:pointer}
+  .lb .prev{left:18px}.lb .next{right:18px}
+  @media(max-width:640px){.lb .prev,.lb .next{display:none}}
+
+  /* ---------- VIDEOS ---------- */
+  .videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+  .vcard{background:var(--card);border:1px solid var(--line);border-radius:15px;overflow:hidden}
+  .vbox{position:relative;aspect-ratio:16/9;background:#0f0f14;cursor:pointer;overflow:hidden}
+  .vbox img{width:100%;height:100%;object-fit:cover;opacity:.75}
+  .vbox .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+  .vbox .play span{width:66px;height:66px;border-radius:50%;background:rgba(226,180,85,.94);
+                   display:flex;align-items:center;justify-content:center;color:#141414;font-size:24px;
+                   padding-left:5px;transition:transform .2s}
+  .vbox:hover .play span{transform:scale(1.08)}
+  .vbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .vbody{padding:18px 20px}
+  .vbody p{margin:0;color:var(--muted);font-size:14.6px}
+
+  /* ---------- PRESSE ---------- */
+  .quote{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);
+         border-radius:13px;padding:24px}
+  .quote p{margin:0 0 10px;font-size:16.5px;color:#e3e3ea;font-style:italic}
+  .quote cite{color:var(--muted);font-size:14px;font-style:normal}
+
+  /* ---------- KONTAKT ---------- */
+  .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:36px}
+  @media(max-width:860px){.contact{grid-template-columns:1fr}}
+  .socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .socials a{border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:14px;color:var(--txt)}
+  .socials a:hover{border-color:var(--gold);color:var(--gold);text-decoration:none}
+
+  footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .todo{color:#e8834f}
+  .badge-todo{display:inline-block;background:rgba(232,131,79,.12);border:1px solid rgba(232,131,79,.4);
+              color:#e8834f;font-size:12px;border-radius:999px;padding:3px 10px;margin-left:8px;
+              vertical-align:middle;letter-spacing:.04em}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <div class="brand">DENISE <span>STANOJEV</span></div>
+    <button class="burger" aria-label="Menü" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <nav><ul id="menu">
+      <li><a href="#geschichte">Geschichte</a></li>
+      <li><a href="#weg">Weg</a></li>
+      <li><a href="#rekord">Rekord</a></li>
+      <li><a href="#galerie">Bilder</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero">
+  <!-- Video-Hintergrund: assets/videos/hero.mp4 ablegen → Zeile einkommentieren -->
+  <!--
+  <video class="bgvideo" autoplay muted loop playsinline poster="assets/bilder/hero-poster.jpg">
+    <source src="assets/videos/hero.mp4" type="video/mp4">
+  </video>
+  -->
+  <!-- Foto-Hintergrund: assets/bilder/hero.jpg ablegen → Zeile einkommentieren -->
+  <!-- <div class="bgimg" style="background-image:url('assets/bilder/hero.jpg')"></div> -->
+
+  <div class="wrap">
+    <div class="eyebrow">Profiboxerin · Superfedergewicht · Wien</div>
+    <h1>Denise<br>Stanojev</h1>
+    <p class="claim">Österreichs jüngste Profiboxerin. <b>12 Kämpfe, 12 Siege</b> — die Geschichte einer jungen Frau, die den Ring zu ihrem Zuhause gemacht hat.</p>
+    <div class="badges">
+      <span class="badge">Bilanz <b>12-0-0</b></span>
+      <span class="badge"><b>7</b> Siege durch KO</span>
+      <span class="badge">Profi seit <b>2021</b></span>
+      <span class="badge">#teamstanojev</span>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="#geschichte">Ihre Geschichte lesen</a>
+      <a class="btn ghost" href="#videos">Videos ansehen</a>
+    </div>
+  </div>
+  <div class="scrollcue">↓ scrollen</div>
+</div>
+
+<!-- ================= GESCHICHTE ================= -->
+<section id="geschichte">
+  <div class="wrap reveal">
+    <h2>Ihre Geschichte</h2>
+    <p class="sub">Von den ersten Trainings bis zu den Profikämpfen vor vollem Haus. <span class="badge-todo">Text wird ergänzt</span></p>
+    <p class="lead">
+      <span class="todo">[Hier kommt Denises eigene Geschichte in ihrer Stimme — 3–4 Absätze:</span>
+      Wo und wie hat sie mit dem Boxen begonnen? Was hat sie gepackt? Wer hat sie begleitet?
+      Was war der schwerste Moment, was der größte Erfolg? Was will sie noch erreichen?<span class="todo">]</span>
+    </p>
+
+    <div class="chapters">
+      <div class="chapter">
+        <div class="year">Der Anfang</div>
+        <div class="txt">
+          <p><span class="todo">[Wie alles begann: Erster Kontakt mit dem Boxsport, erstes Gym, erste Handschuhe.]</span></p>
+        </div>
+      </div>
+      <div class="chapter">
+        <div class="year">2021</div>
+        <div class="txt">
+          <p>Am <b>28. August 2021</b> bestreitet Denise ihr <b>Profidebüt</b> — der Start einer bis heute verlustfreien Karriere.</p>
+          <p><span class="todo">[Details zum Debüt: Gegnerin, Ort, wie sie den Kampf erlebt hat.]</span></p>
+        </div>
+      </div>
+      <div class="chapter">
+        <div class="year">Heute</div>
+        <div class="txt">
+          <p><b>12 Profikämpfe, 12 Siege</b>, davon <b>7 durch KO</b>. Im Superfedergewicht zählt sie laut ihrem Club zu den Top-30 der Welt und national zu Platz 1 <span class="todo">(Angabe des Vereins, wird noch belegt)</span>.</p>
+          <p>Neben dem eigenen Kampfsport gibt Denise ihr Wissen als Trainerin weiter.</p>
+        </div>
+      </div>
+      <div class="chapter">
+        <div class="year">Zukunft</div>
+        <div class="txt">
+          <p><span class="todo">[Ziele: Titelkampf? Nächste Stationen? Was steht 2026 an?]</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WEG / TIMELINE ================= -->
+<section id="weg" class="tight">
+  <div class="wrap reveal">
+    <h2>Der Weg</h2>
+    <p class="sub">Meilensteine — wird laufend ergänzt.</p>
+    <div class="timeline">
+      <div class="tl">
+        <div class="d">28. August 2021</div>
+        <div class="t">Profidebüt</div>
+        <p class="x">Erster Profikampf. <span class="todo">[Ort + Gegnerin ergänzen]</span></p>
+      </div>
+      <div class="tl">
+        <div class="d">2022 – 2023</div>
+        <div class="t">Die ersten Profijahre</div>
+        <p class="x">Siege in Serie. <span class="todo">[Kämpfe aus der Pressemappe ergänzen]</span></p>
+      </div>
+      <div class="tl">
+        <div class="d">13. Vienna Boxing Championship</div>
+        <div class="t">Sieg gegen Bojana Libiszewska</div>
+        <p class="x">Weiterer Profisieg auf großer Wiener Bühne.</p>
+      </div>
+      <div class="tl">
+        <div class="d">„Boxen in der Südstadt"</div>
+        <div class="t">Sieg per TKO in Runde 1</div>
+        <p class="x">Gegen Tamara Miladinović — laut kampfsport1.at der fünfte Sieg in Folge, in einem Frauenkampf vor vollem Haus in Maria Enzersdorf.</p>
+      </div>
+      <div class="tl">
+        <div class="d">14. September 2024</div>
+        <div class="t">Pannonia Fight Storm, Eisenstadt</div>
+        <p class="x">Kampf gegen Ksenija Medic bei der ersten internationalen Boxgala der Landeshauptstadt.</p>
+      </div>
+      <div class="tl">
+        <div class="d">Dezember 2024</div>
+        <div class="t">Sieg gegen Eva Hubmayer</div>
+        <p class="x">Sofiensäle, Wien — bislang letzter eingetragener Profikampf.</p>
+      </div>
+      <div class="tl">
+        <div class="d">2026</div>
+        <div class="t">Nächstes Kapitel</div>
+        <p class="x"><span class="todo">[Aktuelle Pläne eintragen]</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REKORD ================= -->
+<section id="rekord" class="tight">
+  <div class="wrap reveal">
+    <h2>Kampfrekord</h2>
+    <p class="sub">Profikämpfe im Überblick.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">12</div><div class="l">Kämpfe</div></div>
+      <div class="stat"><div class="n">12</div><div class="l">Siege</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">Niederlagen</div></div>
+      <div class="stat"><div class="n">7</div><div class="l">KO-Siege</div></div>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Datum</th><th>Gegnerin</th><th>Veranstaltung / Ort</th><th>Ergebnis</th></tr></thead>
+        <tbody>
+          <tr><td>Dez 2024</td><td>Eva Hubmayer</td><td>Sofiensäle, Wien</td><td class="win">Sieg</td></tr>
+          <tr><td>Sep 2024</td><td>Ksenija Medic</td><td>Pannonia Fight Storm, Eisenstadt</td><td class="win">Sieg</td></tr>
+          <tr><td>—</td><td>Tamara Miladinović</td><td>Boxen in der Südstadt, Maria Enzersdorf</td><td class="win">Sieg (TKO, 1. Rd.)</td></tr>
+          <tr><td>—</td><td>Bojana Libiszewska</td><td>Vienna Boxing Championship 13</td><td class="win">Sieg</td></tr>
+          <tr><td>—</td><td>Claudia Ferenczi</td><td>Boxen in der Südstadt</td><td class="win">Sieg</td></tr>
+          <tr><td>28.08.2021</td><td><span class="todo">[Gegnerin]</span></td><td><span class="todo">[Ort]</span></td><td class="win">Sieg</td></tr>
+          <tr><td colspan="4"><span class="todo">[Restliche Kämpfe aus der Pressemappe ergänzen — Reihenfolge: neueste zuerst]</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Quellen: BoxRec, Tapology, Presseberichte (krone.at, kampfsport1.at). Vollständige Liste wird von Denise bestätigt.</p>
+  </div>
+</section>
+
+<!-- ================= GALERIE ================= -->
+<section id="galerie" class="tight">
+  <div class="wrap reveal">
+    <h2>Bilder</h2>
+    <p class="sub">Training, Kampf, Siege. <span class="badge-todo">Fotos folgen</span></p>
+    <div class="gallery" id="gal">
+      <!-- Bilder ablegen unter assets/bilder/ und src setzen. Dateiname-Schema: 01.jpg, 02.jpg … -->
+      <div class="shot wide"><img src="assets/bilder/01.jpg" alt="Denise Stanojev im Ring" loading="lazy" onerror="ph(this,'Foto 1 — Ring')"></div>
+      <div class="shot"><img src="assets/bilder/02.jpg" alt="Denise Stanojev Training" loading="lazy" onerror="ph(this,'Foto 2 — Training')"></div>
+      <div class="shot"><img src="assets/bilder/03.jpg" alt="Denise Stanojev Sieg" loading="lazy" onerror="ph(this,'Foto 3 — Sieg')"></div>
+      <div class="shot"><img src="assets/bilder/04.jpg" alt="Denise Stanojev Portrait" loading="lazy" onerror="ph(this,'Foto 4 — Portrait')"></div>
+      <div class="shot"><img src="assets/bilder/05.jpg" alt="Denise Stanojev Kampfabend" loading="lazy" onerror="ph(this,'Foto 5 — Kampfabend')"></div>
+      <div class="shot"><img src="assets/bilder/06.jpg" alt="Denise Stanojev Team" loading="lazy" onerror="ph(this,'Foto 6 — Team')"></div>
+    </div>
+    <p class="note">Hinweis: Es werden nur Bilder mit geklärten Nutzungsrechten veröffentlicht.</p>
+  </div>
+</section>
+
+<!-- ================= VIDEOS ================= -->
+<section id="videos" class="tight">
+  <div class="wrap reveal">
+    <h2>Videos</h2>
+    <p class="sub">Kampfhighlights, Interviews und Einblicke. <span class="badge-todo">Links folgen</span></p>
+    <div class="videos">
+      <!--
+        SO GEHT'S:
+        • YouTube:   data-embed="https://www.youtube.com/embed/VIDEO_ID"
+        • Eigenes Video: <video controls poster="..."><source src="assets/videos/kampf1.mp4"></video>
+        • Ohne Video-Link bleibt die Karte als Platzhalter stehen.
+      -->
+      <div class="vcard">
+        <div class="vbox" data-embed="" onclick="playVid(this)">
+          <img src="assets/bilder/video1.jpg" alt="Highlight-Video" onerror="ph(this,'Video 1 — Highlight')">
+          <div class="play"><span>▶</span></div>
+        </div>
+        <div class="vbody">
+          <h3>Kampfhighlight</h3>
+          <p><span class="todo">[YouTube-Link oder Videodatei eintragen]</span></p>
+        </div>
+      </div>
+      <div class="vcard">
+        <div class="vbox" data-embed="" onclick="playVid(this)">
+          <img src="assets/bilder/video2.jpg" alt="Interview" onerror="ph(this,'Video 2 — Interview')">
+          <div class="play"><span>▶</span></div>
+        </div>
+        <div class="vbody">
+          <h3>Interview</h3>
+          <p><span class="todo">[YouTube-Link oder Videodatei eintragen]</span></p>
+        </div>
+      </div>
+      <div class="vcard">
+        <div class="vbox" data-embed="" onclick="playVid(this)">
+          <img src="assets/bilder/video3.jpg" alt="Training" onerror="ph(this,'Video 3 — Training')">
+          <div class="play"><span>▶</span></div>
+        </div>
+        <div class="vbody">
+          <h3>Training / Behind the Scenes</h3>
+          <p><span class="todo">[YouTube-Link oder Videodatei eintragen]</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRESSE ================= -->
+<section id="presse" class="tight">
+  <div class="wrap reveal">
+    <h2>Presse</h2>
+    <p class="sub">Was über Denise geschrieben wurde.</p>
+    <div class="grid">
+      <div class="quote">
+        <p>„Österreichs jüngste Profiboxerin, Denise Stanojev (18) aus Wien" — mit „Agilität und Schlagkraft" als ihre großen Stärken.</p>
+        <cite>Kronen Zeitung, 31.08.2024</cite>
+      </div>
+      <div class="quote">
+        <p>Frauenkampf mit Österreichs jüngster Profiboxerin, die ihren 5. Sieg in Folge holte.</p>
+        <cite>kampfsport1.at, „Boxen in der Südstadt"</cite>
+      </div>
+      <div class="quote">
+        <p>„Eine junge und ambitionierte Profiboxerin mit beeindruckender Bilanz."</p>
+        <cite>Union Sport Performance Club (Vereinsseite)</cite>
+      </div>
+    </div>
+    <p class="note"><span class="todo">[Weitere Presseartikel mit Datum und Medium ergänzen — ggf. mit Link.]</span></p>
+  </div>
+</section>
+
+<!-- ================= KONTAKT ================= -->
+<section id="kontakt" class="tight">
+  <div class="wrap reveal">
+    <div class="contact">
+      <div>
+        <h2>Kontakt &amp; Sponsoring</h2>
+        <p class="sub" style="margin-bottom:16px">Anfragen für Sponsoring, Kampfveranstaltungen, Interviews und Trainings.</p>
+        <p><b>E-Mail:</b> <span class="todo">[eintragen]</span><br>
+           <b>Management:</b> <span class="todo">[Name + Kontakt eintragen]</span><br>
+           <b>Standort:</b> Wien, Österreich</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/stanojev_denise/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@deniseboxing" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.facebook.com/denise.stanojev/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.youtube.com/@denisestanojev8672" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://boxrec.com/en/box-pro/1029328" target="_blank" rel="noopener">BoxRec</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>#teamstanojev</h3>
+        <p><span class="todo">[Kurzer Sponsoring-Text: Was Partner bekommen — Sichtbarkeit auf Kleidung? Ring, Social Media, Presse?]</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="y">2026</span> Denise Stanojev</div>
+    <div><a href="#">Impressum</a> · <a href="#">Datenschutz</a></div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lb" id="lb">
+  <button class="close" onclick="closeLb()">×</button>
+  <button class="prev" onclick="step(-1)">‹</button>
+  <img id="lbimg" src="" alt="">
+  <button class="next" onclick="step(1)">›</button>
+</div>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  /* --- Platzhalter, wenn Bild fehlt --- */
+  function ph(img, label){
+    var s = img.closest('.shot') || img.closest('.vbox');
+    if(!s) return;
+    if(s.classList.contains('shot')){
+      s.classList.remove('wide');
+      s.classList.add('fallback');
+      s.innerHTML = label + '<br><small>Bild folgt</small>';
+    }else{
+      img.style.display='none';
+      var d=document.createElement('div');
+      d.style.cssText='position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#5d5d6a;font-size:13px';
+      d.textContent = label + ' — folgt';
+      s.appendChild(d);
+    }
+  }
+
+  /* --- Lightbox --- */
+  var shots=[], idx=0;
+  function collect(){
+    shots = Array.prototype.slice.call(document.querySelectorAll('#gal .shot:not(.fallback) img'));
+  }
+  document.getElementById('gal').addEventListener('click', function(e){
+    var img = e.target.closest('.shot:not(.fallback)') && e.target.closest('.shot').querySelector('img');
+    if(!img) return;
+    collect(); idx = shots.indexOf(img);
+    openLb(shots[idx].src, shots[idx].alt);
+  });
+  function openLb(src, alt){
+    document.getElementById('lbimg').src = src;
+    document.getElementById('lbimg').alt = alt || '';
+    document.getElementById('lb').classList.add('on');
+  }
+  function closeLb(){ document.getElementById('lb').classList.remove('on'); }
+  function step(n){
+    if(!shots.length) return;
+    idx = (idx + n + shots.length) % shots.length;
+    document.getElementById('lbimg').src = shots[idx].src;
+  }
+  document.getElementById('lb').addEventListener('click', function(e){
+    if(e.target.id === 'lb') closeLb();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeLb();
+    if(e.key === 'ArrowRight') step(1);
+    if(e.key === 'ArrowLeft') step(-1);
+  });
+
+  /* --- Video-Fassade: lädt YouTube erst beim Klick (schnelle Seite, DSGVO-freundlich) --- */
+  function playVid(box){
+    var src = box.getAttribute('data-embed');
+    if(!src){ return; }
+    var f = document.createElement('iframe');
+    f.src = src + (src.indexOf('?')>-1 ? '&' : '?') + 'autoplay=1';
+    f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    f.allowFullscreen=true;
+    box.innerHTML='';
+    box.appendChild(f);
+  }
+
+  /* --- Einblenden beim Scrollen --- */
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
